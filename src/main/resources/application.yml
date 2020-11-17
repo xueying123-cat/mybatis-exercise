@@ -5,3 +5,7 @@ spring:
     password: root
 mybatis:
   mapper-locations: mappers/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8081

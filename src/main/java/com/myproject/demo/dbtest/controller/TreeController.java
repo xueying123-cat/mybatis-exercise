@@ -1,5 +1,6 @@
 package com.myproject.demo.dbtest.controller;
 
+import com.myproject.demo.dbtest.service.TreeService;
 import com.myproject.demo.dbtest.service.UserService;
 import com.myproject.demo.dbtest.vo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +15,14 @@ import java.util.List;
  * @Description
  * @Date 2020/10/15
  */
-@RequestMapping("/users")
+@RequestMapping("/trees")
 @RestController
-public class UserController {
+public class TreeController {
     @Autowired
-    UserService userService;
+    TreeService treeService;
 
-    @GetMapping
-    public List<User> getAll() {
-        return userService.getAll();
+    @GetMapping("/calculate")
+    public void initTreeNumber(){
+        treeService.initTreeNumber();
     }
 }

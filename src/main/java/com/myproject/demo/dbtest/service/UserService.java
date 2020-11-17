@@ -18,10 +18,6 @@ public class UserService {
     @Autowired
     UserMapper userMapper;
 
-    public int updateStepBoundedGrade(String gradeId, BigDecimal hourlyPay) {
-        return userMapper.updateStepBoundedGrade(gradeId, hourlyPay);
-    }
-
     public List<User> getAll(){
         return userMapper.getAll();
     }
